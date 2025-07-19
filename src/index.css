@@ -1,0 +1,117 @@
+/* Import custom fonts */
+@import './styles/fonts.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Neutraface2TextGreek', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #173a5e;
+  border-top: 4px solid #1976d2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Global theme overrides */
+.MuiDialog-paper {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.MuiMenu-paper {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.MuiMenuItem-root {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Map container styling */
+.ol-viewport {
+  transition: background-color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #132f4c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #173a5e;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1976d2;
+}
+
+/* Light theme overrides */
+body[data-theme="light"] {
+  background-color: #f5f5f5;
+  color: #333333;
+}
+
+body[data-theme="light"] .loading-spinner {
+  border-color: #e0e0e0;
+  border-top-color: #1976d2;
+}
+
+body[data-theme="light"] .MuiDialog-paper {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+body[data-theme="light"] .MuiMenu-paper {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+}
+
+body[data-theme="light"] .MuiMenuItem-root {
+  color: #333333 !important;
+}
+
+body[data-theme="light"] .MuiMenuItem-root:hover {
+  background-color: #f5f5f5 !important;
+}
+
+body[data-theme="light"] .ol-viewport {
+  background-color: #f5f5f5 !important;
+}
+
+body[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+body[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+}
+
+body[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #1976d2;
+} 
